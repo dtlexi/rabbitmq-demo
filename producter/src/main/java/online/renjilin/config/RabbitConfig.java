@@ -126,7 +126,7 @@ public class RabbitConfig {
         Map<String,Object> map = new HashMap<>();
         //设置附带的死信交换机
         map.put("x-dead-letter-exchange",EXCHANGE_DEAD);
-        map.put("x-dead-letter-routing-key","inform.test.dead.test");
+        map.put("x-dead-letter-routing-key","info.dead.test");
         //指定重定向的路由建 消息作废之后可以决定需不需要更改他的路由建 如map.put("x-dead-letter-routing-key","dead.order");
         return new Queue(QUEUE_INFORMATION_TEST_DEAD, true,false,false,map);
     }
